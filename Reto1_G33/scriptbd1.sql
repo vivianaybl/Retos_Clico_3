@@ -1,0 +1,16 @@
+CREATE TABLE productos (
+  id INT NOT NULL AUTO_INCREMENT,
+  nombre VARCHAR(45) NOT NULL,
+  precio DECIMAL(10,2) NOT NULL,
+  PRIMARY KEY (id),
+  UNIQUE INDEX id_UNIQUE (id ASC) VISIBLE)
+ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS cliente (
+  idcliente INT NOT NULL,
+  nombre VARCHAR(45) NOT NULL,
+  telefono INT NULL,
+  correo VARCHAR(45) NULL,
+  PRIMARY KEY (idcliente),
+  UNIQUE INDEX idcliente_UNIQUE (idcliente ASC) VISIBLE)
+ENGINE = InnoDB;

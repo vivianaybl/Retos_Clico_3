@@ -1,0 +1,47 @@
+
+GET
+SELECT * FROM CUATRIMOTO
+
+POST
+
+BEGIN
+    INSERT INTO CUATRIMOTO(ID, BRAND, MODEL, CATEGORY_ID, NAME)
+    VALUES(:id, :brand, :model, :category_id, :name);
+    :status_code :=201;
+END;
+
+PUT
+
+BEGIN
+    UPDATE CUATRIMOTO
+    SET BRAND = :brand,
+    MODEL = :model,
+    CATEGORY_ID = :category_id,
+    NAME = :name 
+    WHERE ID = :id; 
+    :status_code := 201;
+END;
+
+DELETE
+
+BEGIN
+    DELETE FROM CUATRIMOTO
+    WHERE ID = :id;
+    :status_code := 204;
+END;
+
+DEJAR LAS TABLAS VACIAS SE ENTRA A SQL DONDE ESTAN LAS TABLAS
+
+DELETE FROM CUATRIMOTO
+WHERE ID = 1
+
+DELETE FROM CUATRIMOTO
+WHERE ID != 1
+
+ejemplo la url que se pega va hasta .com
+
+https://g78733967197eb0-p1d232geq2pjpmuc.adb.sa-saopaulo-1.oraclecloudapps.com
+
+https://g825edac8aa8b8e-op71qc98lqjaeuhw.adb.sa-vinhedo-1.oraclecloudapps.com
+
+https://g825edac8aa8b8e-op71qc98lqjaeuhw.adb.sa-vinhedo-1.oraclecloudapps.com/ords/admin/open-api-catalog/client/

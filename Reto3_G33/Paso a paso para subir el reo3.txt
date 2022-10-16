@@ -1,0 +1,76 @@
+PASO PARA SUBIR EL RETO3
+
+Subir el reto3 a MASTER TECH
+
+PRIMERO
+- Entramos a la carpeta reto3 click derecho y entra a la terminal GIT BASH HERE
+
+git init
+git add .
+git commit -m "first commit"
+
+NOS VAMOS A GIT HUB
+creamos new repositorio (Reto3G33)
+
+copiamos la url de or create a new repository on the command line la casilla SEIS (6)
+
+git remote add origin https://github.com/josehbel/Reto3G33.git
+
+se pega en el GIT BASH HERE
+
+git remote add origin https://github.com/josehbel/Reto3G33.git
+
+git push -u origin master
+
+vamos al GIT HUB y le damos actualizar
+
+Cerramos  el GIT BASH HERE
+
+luego lo subimos a la maquina virtual (IP M.V 144.22.178.133)
+
+Abrimos GIT BASH HERE donde esta la llave descargada ssh-key-2022-10-07.key (si no el sistema no la activa para poder ingresar estos comando)
+
+ssh -i ssh-key-2022-10-07.key opc@144.22.178.133
+
+sudo dnf install git
+sudo dnf install java-11-openjdk-devel
+sudo dnf info maven
+sudo dnf install maven -y
+mvn --version
+sudo alternatives --config java
+1
+sudo alternatives --config javac
+1
+export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
+
+sudo firewall-cmd --zone=public --add-port=8080/tcp --permanent
+
+sudo firewall-cmd --reload
+
+git clone https://github.com/josehbel/Reto3G33.git
+
+entrar carpeta
+cd Reto3G33/
+ls
+mvn clean package -DskipTests
+entrar en target
+ls
+cd target
+ls
+java -jar demo-0.0.1-SNAPSHOT.jar
+
+
+si le salio esto quedo bien
+at.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '
+
+entramos a postman
+hacemos un GET a cualquier carpeta del reto la testea varias veces para bajar el tiempo
+
+http://144.22.178.133:8080/api/Category/all
+
+Ingresamos a master tech en el reto 3 
+colocamos la url hasta aca
+
+http://144.22.178.133:8080
+
+adjunta la carpeta comprimida el src reto3.zip (porque toda pesa 35 MB y sol acepta 20 MB)
